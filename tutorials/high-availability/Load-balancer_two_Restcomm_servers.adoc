@@ -236,6 +236,12 @@ Where <x.x.xx> is the release version number
 
 .Step 14: Use Olympus with Restcomm for WS and WSS
 
+For adding certificate of Load balancer to your browser you should connect to it:
+
+https://127.21.0.104:5091
+
+and confirm certificate.
+
 For WS:
 
 Login to Restcomm server http://127.0.0.2:8080/olympus/
