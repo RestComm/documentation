@@ -1,4 +1,4 @@
-= Configuring Load-balancer and two Restcomm servers on the one local machine
+= Configure Load-balancer and two Restcomm servers on the same local machine
 
 .Load balancer and Restcomm servers diagram
 image::images/Restcomm_servers-LB.png[]
