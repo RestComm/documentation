@@ -1,3 +1,0 @@
-= Tutorials
-
-link:http://documentation.telestax.com/connect/tutorials/high-availability/Load-balancer_two_Restcomm_servers.html[Configure Load-balancer and two Restcomm servers on the same local machine]
