@@ -1,0 +1,6 @@
+[.text-center]
+== WELCOME TO THE NEW TELESTAX DOCUMENTATION WEBSITE
+
+[.text-center]
+Please select one of the sections above to start
+
