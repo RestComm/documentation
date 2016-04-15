@@ -1,0 +1,165 @@
+[[Configure_LB_fail-over_using_keepalived]]
+= LB Fail-over setup using "keepalived".
+
+This tutorial will show you how to configure fail-over capability with "Keepalived" when using two LBs.
+
+In order to establish the high availability system and offer fail-over mechanism using two different LBs each in a separate host, we will need to use the capability of the Keepalived application to create and assign a specific Virtual IP to a defined network interface of a specific host. At the same time Keepalived offers a control mechanism which allows to detect when the LB  is failing and then assign the virtual IP to the interface of the host that the secondary LB resides. This way the target IP from the outside world is always the same and  points to an active load Balancer.
+
+IMPORTANT: Important. Make sure that the virtual IPs to be used are accessible or belong at the same subnet of both LBs.
+
+== Principle Load Balancer
+First we will explain how to configure the principle load balancer.
+
+==========================
+
+.Step 0: Install "keepalived"
+sudo yum install keepalived
+
+
+.Step 1: Configure keepalived (V.IP failover, LB sanity check, state, etc).
+[source,bash]
+----
+vrrp_script chk_lb {
+  script  "/opt/restcomm/lbkeepalive.sh"
+  interval 3
+  timeout  5
+  fall 2
+  rise 1
+}
+
+
+vrrp_instance LBINT_1 {
+    state MASTER
+    virtual_router_id 51
+    priority 150
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        ip_external dev Interface
+        ip_internal dev Interface
+    }
+  track_script {
+     chk_lb
+     }
+   notify /opt/restcomm/keepalivednotify.sh
+}
+
+----
+
+*ip_external*=externalHost configuration for LB. +
+*ip_internal*=internalHost configuration for LB. +
+*Interface*=Interface to add the Virtual IP.
+
+
+.Step 2: Install "lbkeepalive.sh" & "keepalivednotify.sh" scripts.
+For the *lbkeepalive.sh*:
+[source,bash]
+----
+#!/bin/bash
+
+port=$(nc -z ip_internal internalPort;echo $?)
+
+if ls /etc/keepalived/MASTER; then
+ if [ $port -eq 1 ]; then
+      # logger port not open --> uncomment for debugging (prints message to syslog).
+   exit 1
+ else
+      # logger open
+   exit 0
+ fi
+else
+ exit 0
+fi
+
+----
+
+The *lbkeepalive.sh* script actually monitors the state of the corresponding load balancer.
+It is possible to add more, or different type of sanity controls.
+
+For the *keepalivednotify.sh*:
+
+[source,bash]
+----
+#!/bin/bash
+
+TYPE=$1
+NAME=$2
+STATE=$3
+
+KEEPALIVED="/etc/keepalived"
+
+echo "TYPE=$TYPE ,NAME=$NAME,STATE=$STATE "
+
+case $STATE in
+           "MASTER") touch $KEEPALIVED/MASTER
+                  docker run -i -d --net host -v /home/sysadmin/lb-configuration.properties:/opt/loadbalancer/config/lb-configuration.properties  -e INTERFACE="interface_to_use" --name=telestax-lb restcomm/load-balancer:latest
+                  exit 0
+                  ;;
+           "BACKUP") rm $KEEPALIVED/MASTER
+                  docker stop telestax-lb && docker rm telestax-lb
+                  exit 0
+                  ;;
+           "FAULT")  rm $KEEPALIVED/MASTER
+                  docker stop telestax-lb && docker rm telestax-lb
+                  exit 0
+                  ;;
+           *)        echo "unknown state"
+                  exit 1
+                  ;;
+esac
+----
+
+The *keepalivednotify.sh* script handles the state (MASTER,BACKUP,FAULT) of the corresponding Load Balancer.
+==========================
+
+== Secondary Load Balancer
+Secondary Load Balancer configuration (need to follow the same procedure as for primary LB).
+
+.Step 0: Install "keepalived"
+sudo yum install keepalived
+
+.Step 1: Configure keepalived (V.IP fail-over, LB sanity check, state, etc).
+[source,bash]
+----
+! Configuration File for keepalived
+
+vrrp_script chk_lb {
+  script  "/opt/restcomm/lbkeepalive.sh"
+  interval 3
+  timeout  5
+  fall 2
+  rise 1
+}
+
+
+vrrp_instance LBEXT_2 {
+    state BACKUP
+    interface em4
+    virtual_router_id 51
+    priority 150
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+    ip_external dev Interface
+    ip_internal dev Interface
+    }
+  track_script {
+    chk_lb
+  }
+   notify /opt/restcomm/keepalivednotify.sh
+}
+
+----
+
+.Step 2: Install "lbkeepalive.sh" & "keepalivednotify.sh" scripts.
+
+Install the same scripts as for Principle LB.
+==========================
+
+[blue]#The homepage for the Keepalived Project is# http://www.keepalived.org/.
