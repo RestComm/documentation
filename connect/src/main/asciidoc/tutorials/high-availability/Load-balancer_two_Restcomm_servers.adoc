@@ -60,7 +60,7 @@ We shall refer to this above Restcomm directory as the $RESTCOMM_HOME.
 
   mysql -u root -p < init.sql
 
-. Log into mysql and make sure the restcomm database is created :  show databases
+. Log into mysql and make sure the restcomm database is created :  show databases;
 
 .Step 5: Edit the restcomm.xml file to point the DAO to mysql
 
