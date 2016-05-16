@@ -226,14 +226,12 @@ Where <x.x.xx> is the release version number
 . Modify lb-configuration.properties file for correct work. Comment #host= line, and uncomment end set up next lines:
 
   externalHost=172.21.0.104
-  externalPort=5090
+  externalWsPort=5090
+  externalWssPort=5091
   internalHost=127.0.0.4
-  internalPort=5082
+  internalWsPort=5082
+  internalWssPort=5083
 
-. If you need the transport UDP,TCP,TLS the property isTransportWs must be "false", if UDP, WS, WSS this propery must be "true" and set up next lines:
-
-  externalSecurePort=5091
-  internalSecurePort=5083
 
 .Step 14: Use Olympus with Restcomm for WS and WSS
 
@@ -246,9 +244,9 @@ and confirm certificate.
 For WS:
 
 Login to Restcomm server http://127.0.0.2:8080/olympus/
-Fill in form: Load Balancer's ip adress (externalHost) 172.21.0.104 and port(externalPort) 5090
+Fill in form: Load Balancer's ip adress (externalHost) 172.21.0.104 and port(externalWsPort) 5090
 
 For WSS:
 
 Login to Restcomm server https://127.0.0.2:8443/olympus/
-Fill in form: Load Balancer's ip adress (externalHost) 172.21.0.104 and port (externalSecurePort) 5091
+Fill in form: Load Balancer's ip adress (externalHost) 172.21.0.104 and port (externalWssPort) 5091
