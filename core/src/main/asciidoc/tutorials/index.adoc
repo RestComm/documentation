@@ -1,0 +1,14 @@
+[[Tutorials]]
+== Restcomm Core Tutorials
+
+The Restcomm Core Tutorials will show you how to integrate multiple Restcomm Core and Connect components together in creating powerful systems to embed Communications as a feature
+
+* <<smsc-quick-start-user-guide.adoc#smsc,Restcom SMSC Quick Start Guide>>
+
+* <<ussd-quick-start-user-guide.adoc#smsc,Restcom USSD Quick Start Guide>>
+
+=== High Availability
+
+* <<high-availability/Load-balancer_two_Restcomm_servers.adoc#Configure_LB_2_Restcomm_Same_Local_Machine,Configure Load-balancer and two Restcomm servers on the same local machine>>
+
+* <<high-availability/Load-Balancer_failover-keepalived.adoc#Configure_LB_fail-over_using_keepalived,LB Fail-over setup using "keepalived">>

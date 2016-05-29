@@ -1,6 +1,0 @@
-[[Tutorials]]
-= Tutorials
-
-<<high-availability/Load-balancer_two_Restcomm_servers.adoc#Configure_LB_2_Restcomm_Same_Local_Machine,Configure Load-balancer and two Restcomm servers on the same local machine>>
-
-<<high-availability/Load-Balancer_failover-keepalived.adoc#Configure_LB_fail-over_using_keepalived,LB Fail-over setup using "keepalived">>
