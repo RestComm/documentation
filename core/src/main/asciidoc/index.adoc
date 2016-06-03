@@ -30,7 +30,7 @@ You will find documentation for each of the components below :
 
 * link:http://documentation.telestax.com/connect/sdks/index.html[Restcomm SDKs and Clients]
 
-* link:http://documentation.telestax.com/core/sip_servlets/SIP_Servlets_Server_User_html[Restcomm SIP Servlets / SIP - IMS - LTE - WebRTC Application Server]
+* link:http://documentation.telestax.com/core/sip_servlets/SIP_Servlets_Server_User_Guide.html[Restcomm SIP Servlets / SIP - IMS - LTE - WebRTC Application Server]
 
 * link:http://documentation.telestax.com/core/jain_slee/JAIN_SLEE_User_Guide.html[Restcomm JAIN SLEE Service Delivery Platform]
 
@@ -38,7 +38,7 @@ You will find documentation for each of the components below :
 
 * link:http://documentation.telestax.com/core/smsc/SMSC_Gateway_Installation_Guide.html[Restcomm SMSC Installation Guide]
 
-* link:http://documentation.telestax.com/core/smsc/SMSC_Gateway_Amdin_Guide.html[Restcomm SMSC User Guide]
+* link:http://documentation.telestax.com/core/smsc/SMSC_Gateway_Admin_Guide.html[Restcomm SMSC User Guide]
 
 * link:http://documentation.telestax.com/core/ussd/USSD_Gateway_Installation_Guide.html[Restcomm USSD Gateway Installation Guide]
 
