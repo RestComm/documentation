@@ -1,0 +1,24 @@
+Restcomm SMSC has 4 different sending modes
+
+* Datagram
+* Transactional
+* Forward and Store (FAS)
+* Store and Forward (SAF)
+
+= Datagram
+
+Incoming messages will be immediately sent to a destination without being stored in the database.
+
+= Transactional
+
+This is similar to datagram mentioned above, however, a return message (success or failure) will be sent to the originator.
+
+NOTE: *Datagramm* and *Transactional* have only one message delivery attempt. If message delivery fails, no further attempt will be made to resend the message therefore, the message will be dropped
+
+= Forward and Store (FAS):
+
+In this mode, an immediate delivery is performed. If the attempt fails, the message will be stored into a database and then, periodic attempts at sending the message will be performed.
+
+= Store and Forward (SAF):
+
+In this mode, the message will be stored in the database and then, periodic attempts at sending the message will be performed

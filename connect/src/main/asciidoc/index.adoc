@@ -1,4 +1,4 @@
-== RestComm Connect Documentation
+== Restcomm Connect Documentation
 
 <<api/index.adoc#API,API>>
 

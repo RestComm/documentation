@@ -5,9 +5,15 @@ The Restcomm Core Tutorials will show you how to integrate multiple Restcomm Cor
 
 === SMSC
 
-* <<smsc-quick-start-user-guide.adoc#smsc,Restcom SMSC Quick Start Guide>>
+* <<smsc-quick-start-user-guide.adoc#smsc,Restcomm SMSC Quick Start Guide>>
 
-* <<smsc-setting-up-telscale-smsc-gateway-on-google-cloud.adoc#smsc,Setting up Telscale SMSC Gateway on Google Cloud>>
+* <<smsc-starting-and-running-in-simulator-mode.adoc#smsc,Starting and Running in Simulator Mode>>
+
+* <<smsc-understanding-the-different-sending-modes.adoc#smsc,Understanding the Different Sending Modes>>
+
+* <<smsc-setting-up-telscale-smsc-gateway-on-google-cloud.adoc#smsc,Setting up Restcomm SMSC Gateway on Google Cloud>>
+
+* <<smsc-how-to-run-load-test.adoc#smsc,Load Testing Restcomm SMSC on Amazon Web Services>>
 
 === USSD
 
