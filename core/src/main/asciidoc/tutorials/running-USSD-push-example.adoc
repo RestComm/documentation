@@ -1,0 +1,269 @@
+= Restcomm USSD Simulator - Notify
+
+image:http://documentation.telestax.com/core/ussd/images/Restcomm-ussd-simulator_Notify.png[Restcomm USSD Simulator - Notify]
+
+You can simulate a simple Notify dialog by following the below steps:
+
+* Fill the ISDN field with a preferred ISDN number, for example "1111" is good for SS7 Simulator. Now press "Apply changes".
+* Perform "reset" operation.
+* Perform "sendNotify" operation with parameters: String=<Text of your notification>, boolean=false, int=60000 and String=<any random string>. Parameters definition is as below
++
+** 1st String is USSD message that you want to push to mobile
+** 2nd Boolean if set to true means USSD Gw will send empty TCAP Begin and try to establish dialog before sending actual message.
+** 3rd Int is custom invoke timeout. User must respond within this period else USSD Gw will terminate Dialog and Application will get appropriate error message
+** 4th String is random string that is stored at USSD Gw side as custom object. When ever response comes back, USSD Gw will include this custom string in XML Payload.
+* Perform "close" operation.
+
+You will now find a notification at the SS7 Simulator. 
+
+You can also simulate more complicated scenarios like pushing the tree based menu to user and expecting some input from users by calling `sendRequest`. The below Class provides more explanation for attributes and operations of HttpPush.
+
+[source,lang:default,decode:true]
+----
+/**
+
+ * Simple MBean interface. This MBean is front end of simple example for ussd
+
+ * push via HTTP.
+
+ * 
+
+ */
+
+public interface HTTPPushMBean {
+
+
+    /**
+
+     * The URI where HTTP Post request is to be submitted. This should point the
+
+     * USSD Gateway. Basically http://USSD-IP:8080/restcomm
+
+     * 
+
+     * @param uri
+
+     */
+
+    public void setTargetUri(String uri);
+
+
+    /**
+
+     * Get the URI pointing to USSD Gateway for push
+
+     * 
+
+     * @return
+
+     */
+
+    public String getTargetUri();
+
+
+    /**
+
+     * Set the MSISDN where USSD Push is to be sent
+
+     * 
+
+     * @param isdn
+
+     */
+
+    public void setIsdn(String isdn);
+
+
+    /**
+
+     * Get the MSISDN where USSD request is to be pushed
+
+     * 
+
+     * @return
+
+     */
+
+    public String getIsdn();
+
+
+    /**
+
+     * Reset( remove local dialog ) in case something goes wrong
+
+     */
+
+    public void reset();
+
+
+    /**
+
+     * Starts dialog if not already started. Sends Unstructured Request. It can
+
+     * be sent multiple times in the same dialog
+
+     * 
+
+     * @param ussdRequest
+
+     *            The actual USSD String request
+
+     * @param emptyDialogHandshake
+
+     *            If true, USSD Gateway will first establish Dialog by doing
+
+     *            handshake before sending USSD request. If false the USSD
+
+     *            request will be added in Dialog begin message
+
+     * @param invokeTimeout
+
+     *            Time in milliseconds USSD gateway will wait for user to
+
+     *            respond, if user doesn't respond back within specified time,
+
+     *            USSD Gateway will abort the dialog and send back Abort error
+
+     *            to HTTP App
+
+     * @param userData
+
+     *            User Data to be sent with every request to USSD Gateway which will be
+
+     *            returned back with response from USSD Gw. This is just in case if 
+
+     *            application wants to keep some data at Dialog level, for example MSISDN
+
+     * 
+
+     *                        
+
+     * @throws Exception
+
+     */
+
+    public void sendRequest(String ussdRequest, boolean emptyDialogHandshake, int invokeTimeout, String userData) throws Exception;
+
+
+    /**
+
+     * Starts dialog if not already started. Sends Notify Request. It can be
+
+     * sent multiple times in the same dialog
+
+     * 
+
+     * @param ussdRequest
+
+     *            The actual USSD String request
+
+     * @param emptyDialogHandshake
+
+     *            If true, USSD Gateway will first establish Dialog by doing
+
+     *            handshake before sending USSD request. If false the USSD
+
+     *            request will be added in Dialog begin message
+
+     * @param invokeTimeout
+
+     *            Time in milliseconds USSD gateway will wait for user to
+
+     *            respond, if user doesn't respond back within specified time,
+
+     *            USSD Gateway will abort the dialog and send back Abort error
+
+     *            to HTTP App
+
+     * @param userData
+
+     *            User Data to be sent with every request to USSD Gateway which will be
+
+     *            returned back with response from USSD Gw. This is just in case if 
+
+     *            application wants to keep some data at Dialog level, for example MSISDN            
+
+     * @throws Exception
+
+     */
+
+    public void sendNotify(String ussdRequest, boolean emptyDialogHandshake, int invokeTimeout, String userData) throws Exception;
+
+
+    /**
+
+     * USER Abort the underlying MAP Dialog
+
+     * 
+
+     * @throws Exception
+
+     */
+
+    public void abort() throws Exception;
+
+
+    /**
+
+     * Close the underlying MAP Dialog. This will send TCAP End to peer
+
+     * 
+
+     * @throws Exeption
+
+     */
+
+    public void close() throws Exception;
+
+
+    /**
+
+     * Return current status of service - what has been sent, what has been
+
+     * received etc.
+
+     * 
+
+     * @return
+
+     */
+
+    public String getStatus();
+
+}
+----
+
+[[running-the-shell]]
+Running the Shell
+~~~~~~~~~~~~~~~~~
+
+You must start the Shell client and connect to the managed instance prior to executing commands to configure the Gateway. Shell can be started by issuing the following command from `restcomm-ussdgateway-3.0.13/jboss-5.1.0.GA/bin` directory:
+
+[source,lang:default,decode:true]
+----
+[$] ./ss7-cli.sh
+----
+
+Once console starts, it will print following information and await further commands:
+
+[source,lang:default,decode:true]
+----
+version=2.0.0-SNAPSHOT,name=restcomm CLI,prefix=restcomm,vendor=TeleStax
+restcomm>
+----
+
+Before issuing further commands you must connect to a managed instance. For more details on connecting to an instance and for a list of all supported commands and details on configuring the SS7 stack refer to the Restcomm SS7 Stack User Guide.
+
+[[authentication]]
+Authentication
+^^^^^^^^^^^^^^
+
+RestcommUSSD Gateway GUI Management Security is based on the JBoss Security Framework. However please note that the feature is not fully functional yet and you will not be able to sign-out or sign-in using the login panel at the top right corner of the GUI. Future releases will offer a full implementation. 
+
+As of now, there is basic authentication offered (which is based on the JBoss Security framework). When you try to start the Web Console, you will be prompted to enter login credentials. These credentials can be configured in the files `jmx-console-roles.properties` and `jmx-console-users.properties` located at `restcomm-ussdgateway-<version>/jboss-5.1.0.GA/server/<profile>/conf/props/`. 
+
+You can also change the authentication from flat file system to database by making necessary configurations in the file `restcomm-ussdgateway-<version>/jboss-5.1.0.GA/server/<profile>/conf/login-config.xml`. 
+
+For detailed instructions and to know more about JBoss Security Framework please refer to the JBoss Installation Guide http://docs.jboss.org/jbossas/docs/Installation_And_Getting_Started_Guide/5/html_single/index.html#Basic_Configuration_Issues-Security_Service[here].
+
+NOTE: Default user-id and password for GUI Management Console is admin and admin. You can change the user-id and password in files jmx-console-roles.properties andjmx-console-users.properties located atrestcomm-ussdgateway-/jboss-5.1.0.GA/server//conf/props/

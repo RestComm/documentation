@@ -1,0 +1,10 @@
+[[restcomm-ussd-gateway-training]]
+== Restcomm USSD Gateway Training
+
+video::lTuwkCNEccw[youtube, width=640, height=480]
+
+[[telestax-ussd-gateway-with-restcomm-integration-on-a-mobile-ss7-simulator]]
+== Telestax USSD Gateway with Restcomm Integration on a Mobile SS7 Simulator
+
+video::5hrA4SIZp-c[youtube, width=640, height=480]
+
