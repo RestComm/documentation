@@ -3,9 +3,17 @@
 
 The Restcomm Core Tutorials will show you how to integrate multiple Restcomm Core and Connect components together in creating powerful systems to embed Communications as a feature
 
+=== SMSC
+
 * <<smsc-quick-start-user-guide.adoc#smsc,Restcom SMSC Quick Start Guide>>
 
+* <<smsc-setting-up-telscale-smsc-gateway-on-google-cloud.adoc#smsc,Setting up Telscale SMSC Gateway on Google Cloud>>
+
+=== USSD
+
 * <<ussd-quick-start-user-guide.adoc#smsc,Restcom USSD Quick Start Guide>>
+
+=== jDiameter
 
 * <<jdiameter-quick-telscale-diameter-performance-testing-using-seagull.adoc#perf,Quick Telscale Diameter Performance Testing Using Seagull>>
 
