@@ -2,6 +2,7 @@
 
 You can use different Resource Adaptors depending on which protocols you need in your JAIN SLEE application.
 
+* http://documentation.telestax.com/core/jain_slee/ras/sip/User_Guide.html[SIP CAP Resource Adaptor]
 * http://documentation.telestax.com/core/jain_slee/ras/ss7/cap/User_Guide.html[SS7 CAP Resource Adaptor]
 * http://documentation.telestax.com/core/jain_slee/ras/ss7/isup/User_Guide.html[SS7 ISUP Resource Adaptor]
 * http://documentation.telestax.com/core/jain_slee/ras/ss7/map/User_Guide.html[SS7 MAP Resource Adaptor]
