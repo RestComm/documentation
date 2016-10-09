@@ -56,7 +56,7 @@ The Restcomm Platform is comprised of 3 main parts as can be seen on the diagram
 
 ** link:http://documentation.telestax.com/core/ss7/SS7_Stack_Installation_Guide.html[Restcomm jSS7 Installation Guide]
 
-** link:http://documentation.telestax.com/core/ss7/SS7_Stack_User_Guide.html[Restcomm jSS7 GeoLocation Server User Guide]
+** link:http://documentation.telestax.com/core/ss7/SS7_Stack_User_Guide.html[Restcomm jSS7 User Guide]
 
 ** link:http://documentation.telestax.com/core/diameter/Diameter_User_Guide.html[Restcomm jDiameter User Guide]
 
