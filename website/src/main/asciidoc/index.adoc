@@ -32,7 +32,7 @@ The Restcomm Platform is comprised of 3 main parts as can be seen on the diagram
 [.text-left]
 * The link:http://documentation.telestax.com/connect/sdks/index.html[Restcomm Web, iOS and Android SDKs and Clients] which allows you to embed Communications as a feature in your Web, iOS and Android Native Applications
 
-* The link:http://documentation.telestax.com/connect/index.html[Restcomm-Connect], which is an API Exposure layer allowing Web developers to embed Communications as a Feature without having to know anything about telecommunications. You can read link:http://documentation.telestax.com/connect/tutorials/index.html[Restcomm Connect Tutorials] to learn more on how to build powerful apps or leanr to master the platform.
+* The link:http://documentation.telestax.com/connect/index.html[Restcomm-Connect], which is an API Exposure layer allowing Web developers to embed Communications as a Feature without having to know anything about telecommunications. You can read link:http://documentation.telestax.com/connect/tutorials/index.html[Restcomm Connect Tutorials] to learn more on how to build powerful apps or master the platform.
 
 * The link:http://documentation.telestax.com/core/index.html[Restcomm Core] which is the core of the Restcomm Communications Platform and powers Restcomm-Connect. It contains all the necessary low level telecommunications stacks, servers and standalone components allowing you to write powerful and scalable telecommunications applications that interconnect with core network telecommunications elements such as Core IN SS7 Networks or IMS Core Network/EPC for newer generation networks :
 
