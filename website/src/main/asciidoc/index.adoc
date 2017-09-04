@@ -1,5 +1,5 @@
 [.text-center]
-== WELCOME TO THE NEW TELESTAX DOCUMENTATION WEBSITE
+== WELCOME TO THE TELESTAX RESTCOMM DOCUMENTATION WEBSITE
 
 
 The Restcomm Real Time Communications Server is the best architecture to integrate Communications as a Feature into your applications and services. It enables you create, deploy and manage services and applications integrating voice, video and data across a range of IP and legacy communications networks. It drives convergence with the following key enablers and full Communications stack :
