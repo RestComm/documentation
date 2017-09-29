@@ -1,2 +1,2 @@
 # Documentation
-Repository for documentation process for RestComm projects
+Repository for documentation process for Restcomm projects. All documentation is asciidoc based.
