@@ -191,4 +191,4 @@ version=2.0.0-SNAPSHOT,name=Restcomm CLI,prefix=mobicents,vendor=TeleStax
 Restcomm>
 ----
 
-Before issuing further commands you must connect to a managed instance. For more details on connecting to an instance and for a list of all supported commands and details on configuring the SS7 stack refer to the link:http://documentation.telestax.com/core/ss7/SS7_Stack_User_Guide.html[Restcomm SS7 Stack User Guide].
+Before issuing further commands you must connect to a managed instance. For more details on connecting to an instance and for a list of all supported commands and details on configuring the SS7 stack refer to the link:/docs/core/ss7/SS7_Stack_User_Guide.html[Restcomm SS7 Stack User Guide].

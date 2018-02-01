@@ -12,18 +12,18 @@ ifdef::basebackend-html[]
 ++++
 <img src="./images/RestComm_Platform.png" usemap="#restcommMap"/>
 <map name="restcommMap">
-  <area shape="rect" coords="10,7,806,132" href="http://documentation.telestax.com/connect/sdks/index.html" alt="Restcomm SDKs and Clients">
-  <area shape="rect" coords="10,141,806,197" href="http://documentation.telestax.com/connect/index.html" alt="Restcomm-Connect">
-  <area shape="rect" coords="10,215,72,267" href="http://documentation.telestax.com/core/gmlc/GMLC_Admin_Guide.html" alt="Restcomm GMLC GeoLocation Server User Guide">
-  <area shape="rect" coords="178,215,245,267" href="http://documentation.telestax.com/core/smsc/SMSC_Gateway_Admin_Guide.html" alt="Restcomm SMSC User Guide">
-  <area shape="rect" coords="250,215,337,267" href="http://documentation.telestax.com/core/ussd/USSD_Gateway_Admin_Guide.html" alt="Restcomm USSD Gateway User Guide">
-  <area shape="rect" coords="480,215,574,340" href="http://documentation.telestax.com/core/lb/Load_Balancer_User_Guide.html" alt="Restcomm Load Balancer User Guide">
-  <area shape="rect" coords="583,215,704,340" href="http://documentation.telestax.com/core/sip_servlets/SIP_Servlets_Server_User_Guide.html" alt="Restcomm-SIP-Servlets">
-  <area shape="rect" coords="711,215,807,340" href="http://documentation.telestax.com/core/media_server/Media_Server_User_Guide.html" alt="Restcomm Media Server">
-  <area shape="rect" coords="10,282,470,340" href="http://documentation.telestax.com/core/jain_slee/JAIN_SLEE_User_Guide.html" alt="Restcomm JAIN SLEE Service Delivery Platform">
-  <area shape="rect" coords="10,355,107,418" href="http://documentation.telestax.com/core/ss7/SS7_Stack_User_Guide.html" alt="Restcomm jSS7 Stack User Guide">
-  <area shape="rect" coords="142,410,265,489" href="http://documentation.telestax.com/core/smpp-extensions/SMPP_Extensions_User_Guide.html" alt="Restcomm SMPP Stack User Guide" >
-  <area shape="rect" coords="242,355,345,418" href="http://documentation.telestax.com/core/diameter/Diameter_User_Guide.html" alt="Restcomm jDiameter User Guide">
+  <area shape="rect" coords="10,7,806,132" href="/docs/connect/sdks/index.html" alt="Restcomm SDKs and Clients">
+  <area shape="rect" coords="10,141,806,197" href="/docs/connect/index.html" alt="Restcomm-Connect">
+  <area shape="rect" coords="10,215,72,267" href="/docs/core/gmlc/GMLC_Admin_Guide.html" alt="Restcomm GMLC GeoLocation Server User Guide">
+  <area shape="rect" coords="178,215,245,267" href="/docs/core/smsc/SMSC_Gateway_Admin_Guide.html" alt="Restcomm SMSC User Guide">
+  <area shape="rect" coords="250,215,337,267" href="/docs/core/ussd/USSD_Gateway_Admin_Guide.html" alt="Restcomm USSD Gateway User Guide">
+  <area shape="rect" coords="480,215,574,340" href="/docs/core/lb/Load_Balancer_User_Guide.html" alt="Restcomm Load Balancer User Guide">
+  <area shape="rect" coords="583,215,704,340" href="/docs/core/sip_servlets/SIP_Servlets_Server_User_Guide.html" alt="Restcomm-SIP-Servlets">
+  <area shape="rect" coords="711,215,807,340" href="/docs/core/media_server/Media_Server_User_Guide.html" alt="Restcomm Media Server">
+  <area shape="rect" coords="10,282,470,340" href="/docs/core/jain_slee/JAIN_SLEE_User_Guide.html" alt="Restcomm JAIN SLEE Service Delivery Platform">
+  <area shape="rect" coords="10,355,107,418" href="/docs/core/ss7/SS7_Stack_User_Guide.html" alt="Restcomm jSS7 Stack User Guide">
+  <area shape="rect" coords="142,410,265,489" href="/docs/core/smpp-extensions/SMPP_Extensions_User_Guide.html" alt="Restcomm SMPP Stack User Guide" >
+  <area shape="rect" coords="242,355,345,418" href="/docs/core/diameter/Diameter_User_Guide.html" alt="Restcomm jDiameter User Guide">
 </map>
 ++++
 endif::basebackend-html[] 
@@ -31,46 +31,46 @@ endif::basebackend-html[]
 The Restcomm Platform is comprised of 3 main parts as can be seen on the diagram above :
 
 [.text-left]
-* The link:http://documentation.telestax.com/connect/sdks/index.html[Restcomm Web, iOS and Android SDKs and Clients] which allows you to embed Communications as a feature in your Web, iOS and Android Native Applications
+* The link:/docs/connect/sdks/index.html[Restcomm Web, iOS and Android SDKs and Clients] which allows you to embed Communications as a feature in your Web, iOS and Android Native Applications
 
-* The link:http://documentation.telestax.com/connect/index.html[Restcomm-Connect], which is an API Exposure layer allowing Web developers to embed Communications as a Feature without having to know anything about telecommunications. You can read link:http://documentation.telestax.com/connect/tutorials/index.html[Restcomm Connect Tutorials] to learn more on how to build powerful apps or master the platform.
+* The link:/docs/connect/index.html[Restcomm-Connect], which is an API Exposure layer allowing Web developers to embed Communications as a Feature without having to know anything about telecommunications. You can read link:/docs/connect/tutorials/index.html[Restcomm Connect Tutorials] to learn more on how to build powerful apps or master the platform.
 
-* The link:http://documentation.telestax.com/core/index.html[Restcomm Core] which is the core of the Restcomm Communications Platform and powers Restcomm-Connect. It contains all the necessary low level telecommunications stacks, servers and standalone components allowing you to write powerful and scalable telecommunications applications that interconnect with core network telecommunications elements such as Core IN SS7 Networks or IMS Core Network/EPC for newer generation networks :
+* The link:/docs/core/index.html[Restcomm Core] which is the core of the Restcomm Communications Platform and powers Restcomm-Connect. It contains all the necessary low level telecommunications stacks, servers and standalone components allowing you to write powerful and scalable telecommunications applications that interconnect with core network telecommunications elements such as Core IN SS7 Networks or IMS Core Network/EPC for newer generation networks :
 
-** link:http://documentation.telestax.com/core/sip_servlets/SIP_Servlets_Server_User_Guide.html[Restcomm SIP Servlets / SIP - IMS - LTE - WebRTC Application Server]
+** link:/docs/core/sip_servlets/SIP_Servlets_Server_User_Guide.html[Restcomm SIP Servlets / SIP - IMS - LTE - WebRTC Application Server]
 
-** link:http://documentation.telestax.com/core/jain_slee/JAIN_SLEE_User_Guide.html[Restcomm JAIN SLEE Service Delivery Platform]
+** link:/docs/core/jain_slee/JAIN_SLEE_User_Guide.html[Restcomm JAIN SLEE Service Delivery Platform]
 
-** link:http://documentation.telestax.com/core/media_server/Media_Server_User_Guide.html[Restcomm Media Server]
+** link:/docs/core/media_server/Media_Server_User_Guide.html[Restcomm Media Server]
 
-** link:http://documentation.telestax.com/core/smsc/SMSC_Gateway_Installation_Guide.html[Restcomm SMSC Installation Guide]
+** link:/docs/core/smsc/SMSC_Gateway_Installation_Guide.html[Restcomm SMSC Installation Guide]
 
-** link:http://documentation.telestax.com/core/smsc/SMSC_Gateway_Admin_Guide.html[Restcomm SMSC User Guide]
+** link:/docs/core/smsc/SMSC_Gateway_Admin_Guide.html[Restcomm SMSC User Guide]
 
-** link:http://documentation.telestax.com/core/ussd/USSD_Gateway_Installation_Guide.html[Restcomm USSD Gateway Installation Guide]
+** link:/docs/core/ussd/USSD_Gateway_Installation_Guide.html[Restcomm USSD Gateway Installation Guide]
 
-** link:http://documentation.telestax.com/core/ussd/USSD_Gateway_Admin_Guide.html[Restcomm USSD Gateway User Guide]
+** link:/docs/core/ussd/USSD_Gateway_Admin_Guide.html[Restcomm USSD Gateway User Guide]
 
-** link:http://documentation.telestax.com/core/gmlc/GMLC_Installation_Guide.html[Restcomm GMLC GeoLocation Server Installation Guide]
+** link:/docs/core/gmlc/GMLC_Installation_Guide.html[Restcomm GMLC GeoLocation Server Installation Guide]
 
-** link:http://documentation.telestax.com/core/gmlc/GMLC_Admin_Guide.html[Restcomm GMLC GeoLocation Server User Guide]
+** link:/docs/core/gmlc/GMLC_Admin_Guide.html[Restcomm GMLC GeoLocation Server User Guide]
 
-** link:http://documentation.telestax.com/core/camelgw/CAMEL_Gateway_Installation_Guide.html[Restcomm CAMEL Gateway Installation Guide]
+** link:/docs/core/camelgw/CAMEL_Gateway_Installation_Guide.html[Restcomm CAMEL Gateway Installation Guide]
 
-** link:http://documentation.telestax.com/core/camelgw/CAMEL_Gateway_Admin_Guide.html[Restcomm CAMEL Gateway User Guide]
+** link:/docs/core/camelgw/CAMEL_Gateway_Admin_Guide.html[Restcomm CAMEL Gateway User Guide]
 
-** link:http://documentation.telestax.com/core/ss7/SS7_Stack_Installation_Guide.html[Restcomm jSS7 Installation Guide]
+** link:/docs/core/ss7/SS7_Stack_Installation_Guide.html[Restcomm jSS7 Installation Guide]
 
-** link:http://documentation.telestax.com/core/ss7/SS7_Stack_User_Guide.html[Restcomm jSS7 User Guide]
+** link:/docs/core/ss7/SS7_Stack_User_Guide.html[Restcomm jSS7 User Guide]
 
-** link:http://documentation.telestax.com/core/smpp-extensions/SMPP_Extensions_Installation_Guide.html[Restcomm SMPP Extensions Installation Guide]
+** link:/docs/core/smpp-extensions/SMPP_Extensions_Installation_Guide.html[Restcomm SMPP Extensions Installation Guide]
 
-** link:http://documentation.telestax.com/core/smpp-extensions/SMPP_Extensions_User_Guide.html[Restcomm SMPP Extensions User Guide]
+** link:/docs/core/smpp-extensions/SMPP_Extensions_User_Guide.html[Restcomm SMPP Extensions User Guide]
 
-** link:http://documentation.telestax.com/core/diameter/Diameter_User_Guide.html[Restcomm jDiameter User Guide]
+** link:/docs/core/diameter/Diameter_User_Guide.html[Restcomm jDiameter User Guide]
 
-** link:http://documentation.telestax.com/core/lb/Load_Balancer_User_Guide.html[Restcomm Load Balancer User Guide]
+** link:/docs/core/lb/Load_Balancer_User_Guide.html[Restcomm Load Balancer User Guide]
 
-** You can also read link:http://documentation.telestax.com/connect/tutorials/index.html[Restcomm Core Tutorials] to master advanced concepts.
+** You can also read link:/docs/connect/tutorials/index.html[Restcomm Core Tutorials] to master advanced concepts.
 
 

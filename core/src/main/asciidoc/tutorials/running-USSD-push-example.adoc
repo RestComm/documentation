@@ -1,6 +1,6 @@
 = Restcomm USSD Simulator - Notify
 
-image:http://documentation.telestax.com/core/ussd/images/Restcomm-ussd-simulator_Notify.png[Restcomm USSD Simulator - Notify]
+image:/docs/core/ussd/images/Restcomm-ussd-simulator_Notify.png[Restcomm USSD Simulator - Notify]
 
 You can simulate a simple Notify dialog by following the below steps:
 
