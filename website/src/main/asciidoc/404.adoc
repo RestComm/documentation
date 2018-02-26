@@ -1,5 +1,5 @@
 [.text-center]
-== WELCOME TO THE NEW TELESTAX DOCUMENTATION WEBSITE
+== Restcomm Docs
 
 [.text-center]
 The page you are looking for does not exist. It may have been moved, or removed altogether. Perhaps you can return back to the site’s homepage and see if you can find what you are looking for.
