@@ -2232,7 +2232,6 @@ nav.main_menu > ul > li > a {
 	position: relative;
 	padding: 0 17px;
     color: #9d9d9d;
-    text-transform: uppercase;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 1px;
@@ -2518,7 +2517,6 @@ li.narrow .second .inner ul li:last-child {
 .drop_down .wide .second .inner > ul > li > a{
     color: #fff;
     border-bottom: 0;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
 }
