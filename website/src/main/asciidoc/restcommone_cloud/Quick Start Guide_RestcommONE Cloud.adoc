@@ -1,5 +1,8 @@
 = Quick Start Guide - RestcommONE Cloud
-RestcommONE Cloud provides you with access to a web-based Admin console, which allows you to manage your RestcommONE account resources:
+
+RestcommONE Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://restcomm.com/trynow[sign up here].
+
+RestcommONE Cloud comes with a web-based Admin console, which allows you to manage your RestcommONE account resources:
 
 	* Numbers
 	* Applications
