@@ -2,4 +2,4 @@
 
 The following articles will guide you through using your RestcommONE account:
 
-* <<Quick Start Guide - RestcommONE Cloud.adoc,Quick Start Guide>>
+* link:/docs/restcommone_cloud/Quick%20Start%20Guide_RestcommONE%20Cloud.html[Quick Start Guide]

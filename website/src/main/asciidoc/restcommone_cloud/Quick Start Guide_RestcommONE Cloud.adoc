@@ -14,17 +14,20 @@ You can purchase long numbers / DIDs and bind them with specific _Applications_.
 There are numbers that only allow incoming **calls**. There are also numbers that support **SMS** messaging. The latter are called “SMS Enabled” numbers. Please keep this in mind when searching for numbers in your local area, so you can find numbers that support your required functionality.
 
 There are also some special, convenience-only short code numbers, to enable you to easily test some functionality:
+
 	* The number 1235 is attached to the hello-world.xml application. You must have configured VoiceRSS text-to-speech to use this application
 	* The number 1236 is attached to a the Gather verb. It will ask you to enter a number and you can hear the number you enter. You must have configured VoiceRSS text-to-speech to use this application.
 	* The number 1234 plays a pre-recorded file.
 
 == Applications
 An application must be bound to a number. The application can be either:
+
 	* Voice-triggered
 	* SMS-triggered
 	* USSD-triggered
 
 Depending on its type, the application is **triggered** when the corresponding event happens:
+
 	* a Voice application will be triggered when a call is made to the phone;
 	* an SMS application is triggered when an SMS is sent to the phone,
 	* and so on…
@@ -32,6 +35,7 @@ Depending on its type, the application is **triggered** when the corresponding e
 After this initial trigger, the application contains some business logic, in the form of a series of steps, that define how the interaction continues.
 
 Depending on the application type, these steps can include:
+
 	* Interactive Voice Response (**IVR**) menus (Playing audio, Text-to-speech, Collecting caller’s dial pad input, Dialling numbers / joining conference rooms, recording audio, etc.)
 	* Sending **SMS** messages
 	* Sending an **email**
@@ -42,6 +46,7 @@ Depending on the application type, these steps can include:
 To combine all these into your specific application, RestcommONE cloud incorporates a web-based Visual Designer that allows you to drag & drop the different steps into your own flow.
 
 You have 3 options about how to register an Application under your account:
+
 	* Create it with the Visual Designer
 	* Import a previously created Visual Designer App
 	* Register an externally hosted App
@@ -50,6 +55,7 @@ You have 3 options about how to register an Application under your account:
 After you click to create a new App, you are taken to the Template Gallery.
 
 This Gallery includes some examples of the kinds of applications you can build. They are very simple examples, to get you started, so please choose one, depending on the scenario of the App you want to build:
+
 	* **Empty**: Allows you to start with an empty canvas.
 	* **SMS Echo**: When you send an SMS to the Number, you will receive the same SMS back as an auto-reply.
 	* **IVR Menu**: Build the kind of interactive menu you would encounter in a typical call-centre scenario.
@@ -78,6 +84,7 @@ For each SIP client, you can optionally define in the console a `VoiceURL`  whic
 
 == Logs
 This is the reports section, where you can see a separate report for each of the below event types:
+
 	* calls,
 	* SMS messages,
 	* audio recordings
