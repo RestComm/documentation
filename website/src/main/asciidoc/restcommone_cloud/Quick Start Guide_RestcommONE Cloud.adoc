@@ -1,8 +1,8 @@
-= Quick Start Guide - RestcommONE Cloud
+= Quick Start Guide - Restcomm Cloud
 
-RestcommONE Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://restcomm.com/trynow[sign up here].
+Restcomm Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://restcomm.com/trynow[sign up here].
 
-RestcommONE Cloud comes with a web-based Admin console, which allows you to manage your RestcommONE account resources:
+Restcomm Cloud comes with a web-based Admin console, which allows you to manage your Restcomm account resources:
 
 	* Numbers
 	* Applications
@@ -46,7 +46,7 @@ Depending on the application type, these steps can include:
 	* Calling an **external web service** (for integration with 3rd party solutions)
 	* … and many far more complex scenarios!
 
-To combine all these into your specific application, RestcommONE cloud incorporates a web-based Visual Designer that allows you to drag & drop the different steps into your own flow.
+To combine all these into your specific application, Restcomm cloud incorporates a web-based Visual Designer that allows you to drag & drop the different steps into your own flow.
 
 You have 3 options about how to register an Application under your account:
 
@@ -67,7 +67,7 @@ This Gallery includes some examples of the kinds of applications you can build. 
 For more details on how to use the Visual Designer itself, to create your own scenarios, please https://www.restcomm.com/docs/connect/rvd/index.html[click here].
 
 === Importing a Visual Designer Application
-This option allows you to upload an `RCML` application, to be registered under your RestcommONE account, and hosted in RestcommONE Cloud.
+This option allows you to upload an `RCML` application, to be registered under your Restcomm account, and hosted in Restcomm Cloud.
 
 === Registering an Externally Hosted Application
 This option allows you to define an external URL, as the endpoint where an `RCML` application is hosted. The URL will need to return the `RCML` content in the response body.
@@ -77,7 +77,7 @@ This option allows you to define an external URL, as the endpoint where an `RCML
 == SIP Clients
 By creating SIP Clients, you are basically creating SIP accounts which you can use in various devices and SIP phones for making and receiving calls.
 
-You can set the username and password of the SIP Client on the RestcommONE console. Then, to connect from your SIP Phone, you can use:
+You can set the username and password of the SIP Client on the Restcomm console. Then, to connect from your SIP Phone, you can use:
 
 `<username>@cloud.restcomm.com`  , together with your password.
 

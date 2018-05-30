@@ -1,0 +1,109 @@
+= Overview
+
+Restcomm allows to easily build fast, reliable and secure voice applications that let you make, manage, route and scale calls to a browser or any phone.
+
+* Programmatically make and receive voice calls in your application. Using this REST API, you can make outgoing calls, modify calls in progress, and query metadata about calls
+
+* Build apps that scale with the web technologies that you are already using.
+
+* Bring personalized call experiences to your customers quickly with the help of our handy drag and drop Visual Designer.
+
+* Restcomm enables you to stay in control of call quality in bringing your own carrier.
+
+* Quickly interconnect any existing Voice system and handle advanced call control or call transfer with Restcomm.
+
+* Record and store inbound or outbound calls
+
+* Create and manage conference calls
+
+* Send text-to-speech messages
+
+* Integrate speech recognition that translates audio-to-text
+
+
+== API Reference
+
+=== Base URL
+
+All URLs referenced in the documentation have the following base:
+
+`\https://cloud.restcomm.com/restcomm/2012-04-24`
+
+The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencrypted HTTP is not supported.
+
+=== Voice
+
+* <<calls-api.adoc#calls,Restcomm API – Calls>>
+* <<clients-api.adoc#clients,Restcomm API – Clients>>
+* <<recordings-api.adoc#recordings,Restcomm API – Recordings>>
+* <<conferences-api.adoc#conferenceapi, Restcomm API - Conference Management>>
+* <<participants-api.adoc#participantsapi, Restcomm API - Conference Participants Management>>
+
+== RCML
+
+=== Overview
+RCML is a set of instructions you can use to tell Restcomm what to do when you receive an incoming call or SMS.
+
+When someone makes a call to one of your Restcomm numbers, Restcomm will look up the URL associated with that phone number and make a request to that URL. Restcomm will read RCML instructions at that URL to determine what to do: record the call, play a message for the caller, prompt the caller to press digits on their keypad, etc.
+
+RCML is similar to HTML. Only one RCML document is rendered to the caller at once, but many documents can be linked together to build complex interactive SMS applications.
+
+=== Restcomm's request to your application
+
+Restcomm makes HTTP requests to your application just like a regular web browser, in the format *application/x-www-form-urlencoded*. By including parameters and values in its requests, Restcomm sends data to your application that you can act upon before responding.
+
+You can configure the URLs and HTTP Methods Restcomm uses to make its requests via your account portal or using the REST API.
+
+When Restcomm receives a message for one of your Restcomm numbers, it makes a synchronous HTTP request to the message URL configured for that number and expects to receive RCML in response.
+
+Restcomm sends the following parameters with its request as POST parameters or URL query parameters, depending on which HTTP method you've configured:
+
+==== Request Parameters
+
+[cols=",",options="header",]
+|=================================================================================================================================
+|Parameter |Description
+|CallSid |The unique identifier for this call.
+|AccountSid |Your account id.
+|From |The phone number of the originator of the call.
+|To |The phone number of the call recipient.
+|CallStatus |The status of the call. The possible values are queued, ringing, in-progress, completed, busy, failed, and no-answer.
+|ApiVersion |The version of the RestComm API used to handle this call.
+|Direction |The direction of the call. The possible values are inbound and outbound-dial.
+|CallerName |The caller ID for the caller in the case of inbound calls.
+|=================================================================================================================================
+
+==== The RCML verbs for Programmable Voice
+
+You can use different combinations of the verbs below to create all kinds of interactive voice and messaging applications.
+
+* <<dial-rcml.adoc#dial,Dial - Add another party to the call>>
+** <<client-rcml.adoc#client,Client>>
+** <<conference-rcml.adoc#conference,Conference>>
+** <<number-rcml.adoc#number,Number>>
+** <<sip-rcml.adoc#sip,SIP>>
+* <<gather-rcml.adoc#gather,Gather - Collect digits the caller types on their keypad or do speech recognition that translates audio-to-text>>
+* <<hangup-rcml.adoc#hangup,Hangup - Hang up the call>>
+* <<pause-rcml.adoc#pause,Pause - Wait before executing more instructions>>
+* <<play-rcml.adoc#play,Play - Play an audio file for the caller>>
+* <<record-rcml.adoc#record,Record - Record the caller's voice>>
+* <<redirect-rcml.adoc#redirect,Redirect - Redirect call flow to a different RCML document.>>
+* <<reject-rcml.adoc#reject,Reject - Decline an incoming call without being billed.>>
+* <<say-rcml.adoc#say,Say - Read text to the caller>>
+
+[[restcomm_response]]
+=== Restcomm Response
+
+In your response to the request from RestComm you want to provide RCML that will instruct RestComm on how to handle the current call.
+
+**MIME Types. **RestComm supports the MIME types described in the table below.
+
+==== Supported MIME Types
+
+[cols=",",options="header",]
+|===============================================================================================
+|Parameter |Description
+|text/xml, application/xml |RestComm interprets the returned document as an XML instruction set.
+|===============================================================================================
+
+NOTE: When your application returns the RCML document the root element of the document must always be <Response> or the parser will complain.

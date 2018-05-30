@@ -1,5 +1,5 @@
-= RestcommONE Cloud
+= Restcomm Cloud
 
-The following articles will guide you through using your RestcommONE account:
+The following articles will guide you through using your Restcomm account:
 
 * link:/docs/restcommone_cloud/Quick%20Start%20Guide_RestcommONE%20Cloud.html[Quick Start Guide]

@@ -1,0 +1,82 @@
+= Overview
+
+Restcomm allows to programmatically send and receive SMS globally through simple RESTful APIs or a powerful drag and drop Visual Designer.
+
+* Programmatically send and receive high volume of SMS.
+
+* Build apps that scale with the web technologies that you are already using.
+
+* Restcomm enables you to stay in control of SMS delivery, speed and quality in allowing you to bring your own carrier to Restcomm.
+
+* Restcomm can put your existing numbers to work or enhance your Unified Communications Client by SMS Enabling them on Restcomm.
+
+== API Reference
+
+=== Base URL
+
+All URLs referenced in the documentation have the following base:
+
+`\https://cloud.restcomm.com/restcomm/2012-04-24`
+
+The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencrypted HTTP is not supported.
+
+=== The Programmable SMS APIs
+==== SMS
+
+* <<sms-api.adoc#sms,Restcomm API – SMS>>
+
+==== Email
+
+* <<email-api.adoc#email,Restcomm API – Email>>
+
+== RCML
+
+=== Overview
+RCML is a set of instructions you can use to tell Restcomm what to do when you receive an incoming call or SMS.
+
+When someone sends an SMS to one of your Restcomm numbers, Restcomm will look up the URL associated with that phone number and make a request to that URL. Restcomm will read RCML instructions at that URL to determine what to do: perhaps respond with a message or transfer control of a message response to a different URL
+
+RCML is similar to HTML. Only one RCML document is rendered to the caller at once, but many documents can be linked together to build complex interactive SMS applications.
+
+=== Restcomm's request to your application
+
+Restcomm makes HTTP requests to your application just like a regular web browser, in the format *application/x-www-form-urlencoded*. By including parameters and values in its requests, Restcomm sends data to your application that you can act upon before responding.
+
+You can configure the URLs and HTTP Methods Restcomm uses to make its requests via your account portal or using the REST API.
+
+When Restcomm receives a message for one of your Restcomm numbers, it makes a synchronous HTTP request to the message URL configured for that number and expects to receive RCML in response.
+
+Restcomm sends the following parameters with its request as POST parameters or URL query parameters, depending on which HTTP method you've configured:
+
+==== Request Parameters
+
+[cols=",",options="header",]
+|=================================================================================================================================
+|Parameter |Description
+|SmsSid |The unique identifier for this message. May be used to later retrieve this message from the REST API.
+|AccountSid |The id of the Account this message is associated with.
+|From |The phone number that sent this message
+|To |The phone number of the recipient.
+|Body	|The text body of the message.
+|=================================================================================================================================
+
+==== The RCML verbs for Programmable SMS
+
+* <<sms-rcml.adoc#sms,SMS RCML>>
+
+[[restcomm_response]]
+=== Restcomm Response
+
+In your response to the request from RestComm you want to provide RCML that will instruct RestComm on how to handle the current call.
+
+**MIME Types. **RestComm supports the MIME types described in the table below.
+
+==== Supported MIME Types
+
+[cols=",",options="header",]
+|===============================================================================================
+|Parameter |Description
+|text/xml, application/xml |RestComm interprets the returned document as an XML instruction set.
+|===============================================================================================
+
+NOTE: When your application returns the RCML document the root element of the document must always be <Response> or the parser will complain.
