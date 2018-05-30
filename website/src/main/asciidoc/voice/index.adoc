@@ -33,11 +33,11 @@ The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencry
 
 === Voice
 
-* <<calls-api.adoc#calls,Restcomm API – Calls>>
-* <<clients-api.adoc#clients,Restcomm API – Clients>>
-* <<recordings-api.adoc#recordings,Restcomm API – Recordings>>
-* <<conferences-api.adoc#conferenceapi, Restcomm API - Conference Management>>
-* <<participants-api.adoc#participantsapi, Restcomm API - Conference Participants Management>>
+* <<../connect/api/calls-api.adoc#calls,Restcomm API – Calls>>
+* <<../connect/api/clients-api.adoc#clients,Restcomm API – Clients>>
+* <<../connect/api/recordings-api.adoc#recordings,Restcomm API – Recordings>>
+* <<../connect/api/conferences-api.adoc#conferenceapi, Restcomm API - Conference Management>>
+* <<../connect/api/participants-api.adoc#participantsapi, Restcomm API - Conference Participants Management>>
 
 == RCML
 
@@ -77,19 +77,19 @@ Restcomm sends the following parameters with its request as POST parameters or U
 
 You can use different combinations of the verbs below to create all kinds of interactive voice and messaging applications.
 
-* <<dial-rcml.adoc#dial,Dial - Add another party to the call>>
-** <<client-rcml.adoc#client,Client>>
-** <<conference-rcml.adoc#conference,Conference>>
-** <<number-rcml.adoc#number,Number>>
-** <<sip-rcml.adoc#sip,SIP>>
-* <<gather-rcml.adoc#gather,Gather - Collect digits the caller types on their keypad or do speech recognition that translates audio-to-text>>
-* <<hangup-rcml.adoc#hangup,Hangup - Hang up the call>>
-* <<pause-rcml.adoc#pause,Pause - Wait before executing more instructions>>
-* <<play-rcml.adoc#play,Play - Play an audio file for the caller>>
-* <<record-rcml.adoc#record,Record - Record the caller's voice>>
-* <<redirect-rcml.adoc#redirect,Redirect - Redirect call flow to a different RCML document.>>
-* <<reject-rcml.adoc#reject,Reject - Decline an incoming call without being billed.>>
-* <<say-rcml.adoc#say,Say - Read text to the caller>>
+* <<../connect/rcml/dial-rcml.adoc#dial,Dial - Add another party to the call>>
+** <<../connect/rcml/client-rcml.adoc#client,Client>>
+** <<../connect/rcml/conference-rcml.adoc#conference,Conference>>
+** <<../connect/rcml/number-rcml.adoc#number,Number>>
+** <<../connect/rcml/sip-rcml.adoc#sip,SIP>>
+* <<../connect/rcml/gather-rcml.adoc#gather,Gather - Collect digits the caller types on their keypad or do speech recognition that translates audio-to-text>>
+* <<../connect/rcml/hangup-rcml.adoc#hangup,Hangup - Hang up the call>>
+* <<../connect/rcml/pause-rcml.adoc#pause,Pause - Wait before executing more instructions>>
+* <<../connect/rcml/play-rcml.adoc#play,Play - Play an audio file for the caller>>
+* <<../connect/rcml/record-rcml.adoc#record,Record - Record the caller's voice>>
+* <<../connect/rcml/redirect-rcml.adoc#redirect,Redirect - Redirect call flow to a different RCML document.>>
+* <<../connect/rcml/reject-rcml.adoc#reject,Reject - Decline an incoming call without being billed.>>
+* <<../connect/rcml/say-rcml.adoc#say,Say - Read text to the caller>>
 
 [[restcomm_response]]
 === Restcomm Response

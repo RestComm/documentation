@@ -8,7 +8,7 @@ Restcomm allows to programmatically send and receive SMS globally through simple
 
 * Restcomm enables you to stay in control of SMS delivery, speed and quality in allowing you to bring your own carrier to Restcomm.
 
-* Restcomm can put your existing numbers to work or enhance your Unified Communications Client by SMS Enabling them on Restcomm.
+* Restcomm can put your existing numbers to work or enhance your Unified Communications Client by SMS Enabling them on Restcomm through https://www.restcomm.com/docs/core/message-exchange/[Message Exchange].
 
 == API Reference
 
@@ -23,11 +23,11 @@ The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencry
 === The Programmable SMS APIs
 ==== SMS
 
-* <<sms-api.adoc#sms,Restcomm API – SMS>>
+* <<../connect/api/sms-api.adoc#sms,Restcomm API – SMS>>
 
 ==== Email
 
-* <<email-api.adoc#email,Restcomm API – Email>>
+* <<../connect/api/email-api.adoc#email,Restcomm API – Email>>
 
 == RCML
 
@@ -62,7 +62,7 @@ Restcomm sends the following parameters with its request as POST parameters or U
 
 ==== The RCML verbs for Programmable SMS
 
-* <<sms-rcml.adoc#sms,SMS RCML>>
+* <<../connect/rcml/sms-rcml.adoc#sms,SMS RCML>>
 
 [[restcomm_response]]
 === Restcomm Response
