@@ -1,76 +1,44 @@
 [.text-center]
 == Restcomm Docs
-
-
-The Restcomm Real Time Communications Server is the best architecture to integrate Communications as a Feature into your applications and services. It enables you create, deploy and manage services and applications integrating voice, video and data across a range of IP and legacy communications networks. It drives convergence with the following key enablers and full Communications stack :
+[.text-left]
+Read our API Reference Documentation and Quickstarts to integrate SMS and Voice to your website, applications or unified communications clients.
+[.text-left]
+Get familiar with concepts common to Restcomm APIs and products then start building connected applications with Restcomm.
 
 ifndef::basebackend-html[] 
-image::images/RestComm_Platform.png[]
+[link=https://www.restcomm.com/sign-up]
+image::images/Signup.png
 endif::basebackend-html[]
-
-ifdef::basebackend-html[] 
+ifdef::basebackend-html[]
 ++++
-<img src="./images/RestComm_Platform.png" usemap="#restcommMap"/>
-<map name="restcommMap">
-  <area shape="rect" coords="10,7,806,132" href="/docs/connect/sdks/index.html" alt="Restcomm SDKs and Clients">
-  <area shape="rect" coords="10,141,806,197" href="/docs/connect/index.html" alt="Restcomm-Connect">
-  <area shape="rect" coords="10,215,72,267" href="/docs/core/gmlc/GMLC_Admin_Guide.html" alt="Restcomm GMLC GeoLocation Server User Guide">
-  <area shape="rect" coords="178,215,245,267" href="/docs/core/smsc/SMSC_Gateway_Admin_Guide.html" alt="Restcomm SMSC User Guide">
-  <area shape="rect" coords="250,215,337,267" href="/docs/core/ussd/USSD_Gateway_Admin_Guide.html" alt="Restcomm USSD Gateway User Guide">
-  <area shape="rect" coords="480,215,574,340" href="/docs/core/lb/Load_Balancer_User_Guide.html" alt="Restcomm Load Balancer User Guide">
-  <area shape="rect" coords="583,215,704,340" href="/docs/core/sip_servlets/SIP_Servlets_Server_User_Guide.html" alt="Restcomm-SIP-Servlets">
-  <area shape="rect" coords="711,215,807,340" href="/docs/core/media_server/Media_Server_User_Guide.html" alt="Restcomm Media Server">
-  <area shape="rect" coords="10,282,470,340" href="/docs/core/jain_slee/JAIN_SLEE_User_Guide.html" alt="Restcomm JAIN SLEE Service Delivery Platform">
-  <area shape="rect" coords="10,355,107,418" href="/docs/core/ss7/SS7_Stack_User_Guide.html" alt="Restcomm jSS7 Stack User Guide">
-  <area shape="rect" coords="142,410,265,489" href="/docs/core/smpp-extensions/SMPP_Extensions_User_Guide.html" alt="Restcomm SMPP Stack User Guide" >
-  <area shape="rect" coords="242,355,345,418" href="/docs/core/diameter/Diameter_User_Guide.html" alt="Restcomm jDiameter User Guide">
-</map>
+<a href="https://www.restcomm.com/sign-up">
+<img width="104" height="100" src="./images/Signup.png"/>
+</a> 
 ++++
 endif::basebackend-html[] 
 
-The Restcomm Platform is comprised of 3 main parts as can be seen on the diagram above :
-
 [.text-left]
-* The link:/docs/connect/sdks/index.html[Restcomm Web, iOS and Android SDKs and Clients] which allows you to embed Communications as a feature in your Web, iOS and Android Native Applications
+=== Concepts 
 
-* The link:/docs/connect/index.html[Restcomm-Connect], which is an API Exposure layer allowing Web developers to embed Communications as a Feature without having to know anything about telecommunications. You can read link:/docs/connect/tutorials/index.html[Restcomm Connect Tutorials] to learn more on how to build powerful apps or master the platform.
+There is multiple ways to interact with Restcomm to build communications applications
 
-* The link:/docs/core/index.html[Restcomm Core] which is the core of the Restcomm Communications Platform and powers Restcomm-Connect. It contains all the necessary low level telecommunications stacks, servers and standalone components allowing you to write powerful and scalable telecommunications applications that interconnect with core network telecommunications elements such as Core IN SS7 Networks or IMS Core Network/EPC for newer generation networks :
+----
+curl -X POST https://<accountSid>:<authToken>@cloud.restcomm.com/restcomm/2012-04-24/Accounts/ACae6e420f425248d6a26948c17a9e2acf/Calls/CAfa51b104354440b09213d04752f50271 -d "Status=completed"
+----
 
-** link:/docs/core/sip_servlets/SIP_Servlets_Server_User_Guide.html[Restcomm SIP Servlets / SIP - IMS - LTE - WebRTC Application Server]
 
-** link:/docs/core/jain_slee/JAIN_SLEE_User_Guide.html[Restcomm JAIN SLEE Service Delivery Platform]
+* Use <<rvd/index.adoc#RVD,Restcomm Visual Designer (RVD)>> to build applications easily with drag and drop without knowing anything about programming
 
-** link:/docs/core/media_server/Media_Server_User_Guide.html[Restcomm Media Server]
+* The <<api/index.adoc#API,Restcomm API>> allows you to query meta-data about your account, phone numbers, calls, text messages, and recordings. You can also do some communications control like initiate outbound calls and send SMS messages.
 
-** link:/docs/core/smsc/SMSC_Gateway_Installation_Guide.html[Restcomm SMSC Installation Guide]
+* The <<rcml/index.adoc#RCML,RestComm Markup Language>> is a set of instructions you can use to tell Restcomm what to do when you receive an incoming call or SMS.
 
-** link:/docs/core/smsc/SMSC_Gateway_Admin_Guide.html[Restcomm SMSC User Guide]
+* The <<sdks/index.adoc#SDKs,Restcomm Web, iOS and Android SDKs - Preview>> allows you to embed Communications as a feature in your Web, iOS and Android Native Applications
 
-** link:/docs/core/ussd/USSD_Gateway_Installation_Guide.html[Restcomm USSD Gateway Installation Guide]
+* The <<admin/index.adoc#AdminUI,Restcomm Console>> allows you to interact with your account, buy DIDs, configure your Restcomm Clients, check your logs and much more
 
-** link:/docs/core/ussd/USSD_Gateway_Admin_Guide.html[Restcomm USSD Gateway User Guide]
+* The <<tutorials/index.adoc#tutorials,Restcomm Tutorials>> will help you in creating sample applications that cover common use cases in a variety of languages using the Restcomm API, RCML or Visual Designer. Download, test, and tweak for yourself. 
 
-** link:/docs/core/gmlc/GMLC_Installation_Guide.html[Restcomm GMLC GeoLocation Server Installation Guide]
 
-** link:/docs/core/gmlc/GMLC_Admin_Guide.html[Restcomm GMLC GeoLocation Server User Guide]
-
-** link:/docs/core/camelgw/CAMEL_Gateway_Installation_Guide.html[Restcomm CAMEL Gateway Installation Guide]
-
-** link:/docs/core/camelgw/CAMEL_Gateway_Admin_Guide.html[Restcomm CAMEL Gateway User Guide]
-
-** link:/docs/core/ss7/SS7_Stack_Installation_Guide.html[Restcomm jSS7 Installation Guide]
-
-** link:/docs/core/ss7/SS7_Stack_User_Guide.html[Restcomm jSS7 User Guide]
-
-** link:/docs/core/smpp-extensions/SMPP_Extensions_Installation_Guide.html[Restcomm SMPP Extensions Installation Guide]
-
-** link:/docs/core/smpp-extensions/SMPP_Extensions_User_Guide.html[Restcomm SMPP Extensions User Guide]
-
-** link:/docs/core/diameter/Diameter_User_Guide.html[Restcomm jDiameter User Guide]
-
-** link:/docs/core/lb/Load_Balancer_User_Guide.html[Restcomm Load Balancer User Guide]
-
-** You can also read link:/docs/connect/tutorials/index.html[Restcomm Core Tutorials] to master advanced concepts.
 
 
