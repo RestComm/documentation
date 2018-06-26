@@ -33,11 +33,14 @@ The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencry
 
 === Voice
 
+* <<../connect/api/available-phone-numbers-api.adoc#available-phone-numbers,Restcomm API – AvailablePhoneNumbers>>
 * <<../connect/api/calls-api.adoc#calls,Restcomm API – Calls>>
 * <<../connect/api/clients-api.adoc#clients,Restcomm API – Clients>>
-* <<../connect/api/recordings-api.adoc#recordings,Restcomm API – Recordings>>
 * <<../connect/api/conferences-api.adoc#conferenceapi, Restcomm API - Conference Management>>
 * <<../connect/api/participants-api.adoc#participantsapi, Restcomm API - Conference Participants Management>>
+* <<../connect/api/incoming-phone-numbers-api.adoc#incoming-phone-numbers,Restcomm API – IncomingPhoneNumbers>>
+* <<../connect/api/recordings-api.adoc#recordings,Restcomm API – Recordings>>
+
 
 == RCML
 

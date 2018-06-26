@@ -23,6 +23,8 @@ The Restcomm RESTful APIs are served over HTTPS. To ensure data privacy, unencry
 === The Programmable SMS APIs
 ==== SMS
 
+* <<../connect/api/available-phone-numbers-api.adoc#available-phone-numbers,Restcomm API – AvailablePhoneNumbers>>
+* <<../connect/api/incoming-phone-numbers-api.adoc#incoming-phone-numbers,Restcomm API – IncomingPhoneNumbers>>
 * <<../connect/api/sms-api.adoc#sms,Restcomm API – SMS>>
 
 ==== Email
