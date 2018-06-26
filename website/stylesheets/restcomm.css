@@ -7329,6 +7329,10 @@ header.sticky .header_top{
 						.content{
 				margin-top: -84px;
 			}
+
+.listingblock > .content{
+	margin-top: -1px;
+}
 				
 	
 .logo_wrapper,

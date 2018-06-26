@@ -22,6 +22,10 @@ endif::basebackend-html[]
 
 There is multiple ways to interact with Restcomm to build communications applications
 
+----
+curl dsjdsds
+----
+
 * Use <<connect/rvd/index.adoc#RVD,Restcomm Visual Designer (RVD)>> to build applications easily with drag and drop without knowing anything about programming
 
 * The <<connect/api/index.adoc#API,Restcomm API>> allows you to query meta-data about your account, phone numbers, calls, text messages, and recordings. You can also do some communications control like initiate outbound calls and send SMS messages.
