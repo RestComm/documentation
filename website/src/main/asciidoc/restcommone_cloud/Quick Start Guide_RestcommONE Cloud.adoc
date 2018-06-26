@@ -1,6 +1,6 @@
 = Quick Start Guide - Restcomm Cloud
 
-Restcomm Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://restcomm.com/trynow[sign up here].
+Restcomm Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://www.restcomm.com/sign-up[sign up here].
 
 Restcomm Cloud comes with a web-based Admin console, which allows you to manage your Restcomm account resources:
 
