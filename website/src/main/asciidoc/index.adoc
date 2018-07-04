@@ -22,7 +22,7 @@ endif::basebackend-html[]
 
 There is multiple ways to interact with {product} to build communications applications
 
-* The <<connect/admin/console-overview.adoc#console,{product} Console Overview>> allows you to interact with your account, build Applications, buy Numbers, configure your {product} Clients, check your logs and much more
+* The <<connect/admin/console-overview.adoc#console,{product} Console>> allows you to interact with your account, build Applications, buy Numbers, configure your {product} Clients, check your logs and much more
 
 * Use <<connect/rvd/index.adoc#RVD,{product} Visual Designer (RVD)>> to build applications easily with drag and drop without knowing anything about programming
 
