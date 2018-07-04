@@ -69,6 +69,8 @@
 					    <stylesheet>${basedir}/../website/stylesheets/telestax.css</stylesheet>
 				            <project-version>${project.version}</project-version>
 					    <this-application>Load Balancer </this-application>
+					    <product>Restcomm</product>
+					    <rcml>RCML</rcml>
 					    <this-platform>Restcomm </this-platform>
 					    <jee-platform>JBoss Application Server</jee-platform>
 					</attributes>
