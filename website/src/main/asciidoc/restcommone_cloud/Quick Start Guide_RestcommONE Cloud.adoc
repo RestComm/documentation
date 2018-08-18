@@ -85,7 +85,7 @@ Define the external URL of a RCML application. Same needs to return as response 
 
 
 
-=== 3. SIP clients
+== 3. SIP clients
 SIP clients are actual SIP accounts which can be used on different devices and SIP phones to make and receive calls.
 
 
@@ -107,7 +107,7 @@ To set a VoiceURL for your client navigate to your Dashboard -> Clients and sele
 
 
 
-=== 4. Logs
+== 4. Logs
 The Logs section of the Console Dashboards, provides detailed reports of the following event types:
 
 	* Calls
@@ -124,7 +124,7 @@ You can access all reports by navigating to Dashboard -> Logs.
 
 
 
-=== 5. Account settings
+== 5. Account settings
 You can access your account settings by navigating to your username, at the top right corner of your screen. 
 
 
