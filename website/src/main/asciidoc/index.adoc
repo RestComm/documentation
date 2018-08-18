@@ -4,13 +4,13 @@
 == Making Business Communications Simple
 
 
-== {product} Documentation
-[.text-left]
+[.text-center]
 Everything you need to start building communications applications today with Cloud based Voice and SMS APIs
 
-[.text-left]
+[.text-center]
 Get familiar with concepts common to {product} APIs and products then start building connected applications with Restcomm.
 
+[.text-center]
 ifndef::basebackend-html[] 
 [link=https://www.restcomm.com/sign-up]
 image::images/Signup.png
@@ -38,7 +38,6 @@ endif::basebackend-html[]
 
 |=========================================================
 
-{nbsp} +
 {nbsp} +
 
 [.text-left]
