@@ -136,7 +136,7 @@ The Auth Token is the password that is required in order to perform different  R
 
 
 
-=== 5.2. Sub-account settings
+== 5.2. Sub-account settings
 Under your main Account settings you will find an option to create sub-accounts. In general, sub-accounts are used to separate the usage of specific phone numbers and the applications bound to them. 
 
 For example, if you have registered two phone numbers, you can create two sub-accounts and have each one of them manage only one number. In this case no sub-account will have the right to manage a number that doesn’t belong to it.
