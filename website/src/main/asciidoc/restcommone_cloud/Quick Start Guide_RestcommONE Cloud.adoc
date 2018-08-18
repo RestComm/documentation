@@ -1,109 +1,159 @@
 = Quick Start Guide - Restcomm Cloud
 
-Restcomm Cloud is the commercial cloud-hosted offering of the Restcomm Open Source platform. It gives you a good way to try out some of the Restcomm features, without manually deploying and configuring everything yourself. You can https://www.restcomm.com/sign-up[sign up here].
 
-Restcomm Cloud comes with a web-based Admin console, which allows you to manage your Restcomm account resources:
+Restcomm Cloud is a commercial Cloud-hosted offering of the Restcomm Open Source platform. No more need to manually deploy and configure everything on your own. Instead you can https://www.restcomm.com/sign-up[sign up for a Cloud account] and try out some of the Restcomm features.
+
+The web-based Admin console, allows you to manage your account resources:
 
 	* Numbers
 	* Applications
 	* SIP Clients
 	* Logs / Reports
 
-Let's briefly cover what each of these means.
 
-== Numbers
-You can purchase long numbers / DIDs and bind them with specific _Applications_.
+== 1. Numbers
 
-There are numbers that only allow incoming **calls**. There are also numbers that support **SMS** messaging. The latter are called “SMS Enabled” numbers. Please keep this in mind when searching for numbers in your local area, so you can find numbers that support your required functionality.
+Search for and purchase phone numbers to later bind to specific applications.
 
-There are also some special, convenience-only short code numbers, to enable you to easily test some functionality:
+While searching for phone numbers, keep in mind that some only allow receiving incoming calls. Others, known as “SMS enabled phone numbers”, support SMS messaging. There are also short code phone numbers, that you can use at your convenience to easily test different functionalities.
 
-	* The number 1235 is attached to the hello-world.xml application. You must have configured VoiceRSS text-to-speech to use this application
-	* The number 1236 is attached to a the Gather verb. It will ask you to enter a number and you can hear the number you enter. You must have configured VoiceRSS text-to-speech to use this application.
-	* The number 1234 plays a pre-recorded file.
+The following list of short code phone numbers is bind to Restcomm demo application and aims to help you test couple of the platform’s main functionalities.
 
-== Applications
-An application must be bound to a number. The application can be either:
 
-	* Voice-triggered
-	* SMS-triggered
-	* USSD-triggered
+	* 1235 - bound to a Hello World! demo application which greets you in different languages; You must have configured a text-to-speech engine (such as VoiceRSS, Acapella or another TTS) in order to use this application. 
+	* 1236 - bound to a Gather verb demo application which prompts you to enter a digit and then plays it back for you. You need a TTS service configured to have the application fully functional.
+	* 1234 - bound to Play verb demo application that plays back a pre-recorded media file.
 
-Depending on its type, the application is **triggered** when the corresponding event happens:
+== 2. Applications
+To make an application functional, same needs to be bound to a registered phone number. 
+There are three types of Restcomm applications: Voice, SMS and USSD. Triggering an application depends on its type.
 
-	* a Voice application will be triggered when a call is made to the phone;
-	* an SMS application is triggered when an SMS is sent to the phone,
-	* and so on…
+	* A Voice application is triggered when a call is made to the corresponding phone number
+	* An SMS application is triggered when SMS is sent to the corresponding phone number.
+	* A USSD application is triggered when a short code is sent to the corresponding phone number.
+	
+Once started, the application fires up a serie of business logic events, that define how the interaction will continue. Based on the application type, these events may include:
 
-After this initial trigger, the application contains some business logic, in the form of a series of steps, that define how the interaction continues.
+	* Interactive Voice Response (IVR) menus (Playing audio, text-to-speech, collecting caller’s dial pad input, dialing phone numbers/joining a conference room, recording audio, etc.)
+	* Sending SMS messages
+	* Sending an email
+	* Sending a fax
+	* Calling an external web service (while integrating with 3rd party services)
+	* And much more complex scenarios!
 
-Depending on the application type, these steps can include:
+To let you combine and use all of these in your application, Restcomm Cloud utilizes a web-based Visual designer. Its intuitive interface allows you to drag and drop different elements and design your own flows.
 
-	* Interactive Voice Response (**IVR**) menus (Playing audio, Text-to-speech, Collecting caller’s dial pad input, Dialling numbers / joining conference rooms, recording audio, etc.)
-	* Sending **SMS** messages
-	* Sending an **email**
-	* Sending a **fax**
-	* Calling an **external web service** (for integration with 3rd party solutions)
-	* … and many far more complex scenarios!
+Creating an application only takes couple of clicks.  Restcomm users may choose between three options:
 
-To combine all these into your specific application, Restcomm cloud incorporates a web-based Visual Designer that allows you to drag & drop the different steps into your own flow.
+	* To create an application from scratch using the Visual designer
+	
+	* To import a previously created one
+	
+	* Or to register an  externally hosted application
 
-You have 3 options about how to register an Application under your account:
 
-	* Create it with the Visual Designer
-	* Import a previously created Visual Designer App
-	* Register an externally hosted App
 
-=== Creating an App with the Visual Designer
-After you click to create a new App, you are taken to the Template Gallery.
+=== 2.1. Creating a Visual designer application from scratch 
 
-This Gallery includes some examples of the kinds of applications you can build. They are very simple examples, to get you started, so please choose one, depending on the scenario of the App you want to build:
+To create a Visual designer application:
+
+	* Navigate to Applications -> Add new app
+	
+	* Choose your application type
+
+Next, you will be redirected to the Template Gallery where you can see example of applications you can build. To get started, choose the one that fits best your application use case.
+
+	* **Empty** - lets you start with an empty canvas
+	
+	* **SMS Echo** - send an SMS to a phone number and receive it back as an auto-reply
+	
+	* **IVR Menu**:  - build an interactive menu you could encounter in a typical call center
+	
+	* **USSD Menu** - Have you ever dialed numbers like *101# from your mobile? That’s what USSD is. This template shows you how to use these USSD“Short codes” also known as “Feature codes” 
+	
+https://www.restcomm.com/docs/connect/rvd/index.html[Learn more] about how to use Visual designer itself to create your own application scenarios.
+
+
+
+=== 2.2. Importing a Visual designer application
+You can upload a RCML application under your Restcomm account into the Cloud. 
+
+
+
+=== 2.3. Creating an externally hosted application
+Define the external URL of a RCML application. Same needs to return as response the RCML body of the application in order to make it work.
+
+
+
+=== 3. SIP clients
+SIP clients are actual SIP accounts which can be used on different devices and SIP phones to make and receive calls.
+
+
+
+=== 3.1. Creating a SIP client from the Restcomm Console
+To create a new SIP client, simply navigate to Dashboard -> Clients -> New client. You will be prompted to set a username and password for the new client.
+
+
+
+=== 3.2. Connecting to a Restcomm SIP client from a SIP phone
+Dial the following SIP address to connect from your SIP phone to your Restcomm client: <username>@cloud.restcomm.com.
+
+
+
+=== 3.3. Defining a VoiceURL of a Restcomm SIP client
+For each Restcomm SIP client, you can optionally define VoiceURL from the Console. That is an URL of a Voice application that will be invoked any time this SIP client attempts to dial any number.
+
+To set a VoiceURL for your client navigate to your Dashboard -> Clients and select your SIP client from the list. From the Voice request drop down select Application and then choose the one you want to assign to your SIP client from the second drop down.
+
+
+
+=== 4. Logs
+The Logs section of the Console Dashboards, provides detailed reports of the following event types:
+
+	* Calls
+	
+	* SMS messages
+	
+	* Audio recordings
+	
+	* Transcriptions (using the Transcribe parameters of the Record verb)
+	
+	* Notifications
+
+You can access all reports by navigating to Dashboard -> Logs.
+
+
+
+=== 5. Account settings
+You can access your account settings by navigating to your username, at the top right corner of your screen. 
+
+
+
+=== 5.1. Main Account settings
+To access your main accounts settings, navigate to your username -> Account. You can change your password and get details about your Account SID and Auth Token.
+
+The Auth Token is the password that is required in order to perform different  Restcomm-Connect API operations. You can reveal the hashed password by clicking on the button eye button next to it.
+
+
+
+=== 5.2. Sub-account settings
+Under your main Account settings you will find an option to create sub-accounts. In general, sub-accounts are used to separate the usage of specific phone numbers and the applications bound to them. 
+
+For example, if you have registered two phone numbers, you can create two sub-accounts and have each one of them manage only one number. In this case no sub-account will have the right to manage a number that doesn’t belong to it.
+Your man account can manage the permissions of both of the sub-accounts. 
+
+For more information, please visit the https://www.restcomm.com/docs/connect/api/Restcomm%20-%20Multi-tenancy%20and%20Managing%20Sub-Accounts.html[sub-accounts-documentation].
+
+
+
 
 	* **Empty**: Allows you to start with an empty canvas.
+	
 	* **SMS Echo**: When you send an SMS to the Number, you will receive the same SMS back as an auto-reply.
+	
 	* **IVR Menu**: Build the kind of interactive menu you would encounter in a typical call-centre scenario.
-	* **USSD Menu**: You might have experienced USSD if you have typed numbers like `*101#` into your mobile phone. These are also called “Quick Codes” or “Feature Codes” and this template shows you how to use them.
+	
+	* **USSD Menu**: You might have experienced USSD if you have typed numbers like `*101#` into your mobile phone.
+	These are also called “Quick Codes” or “Feature Codes” and this template shows you how to use them.
 
 For more details on how to use the Visual Designer itself, to create your own scenarios, please https://www.restcomm.com/docs/connect/rvd/index.html[click here].
-
-=== Importing a Visual Designer Application
-This option allows you to upload an `RCML` application, to be registered under your Restcomm account, and hosted in Restcomm Cloud.
-
-=== Registering an Externally Hosted Application
-This option allows you to define an external URL, as the endpoint where an `RCML` application is hosted. The URL will need to return the `RCML` content in the response body.
-
-
-
-== SIP Clients
-By creating SIP Clients, you are basically creating SIP accounts which you can use in various devices and SIP phones for making and receiving calls.
-
-You can set the username and password of the SIP Client on the Restcomm console. Then, to connect from your SIP Phone, you can use:
-
-`<username>@cloud.restcomm.com`  , together with your password.
-
-For each SIP client, you can optionally define in the console a `VoiceURL`  which is the URL of a Voice application that will be invoked **any time this specific SIP client will attempt to dial any number**.
-
-
-
-== Logs
-This is the reports section, where you can see a separate report for each of the below event types:
-
-	* calls,
-	* SMS messages,
-	* audio recordings
-	* transcriptions (using the Transcribe parameters of the Record Verb)
-	* notifications
-
-== Account Settings
-If you want to access your account settings, you can click your username at the top right corner of the window, as shown in the screenshot below. That will allows you to change your account passwords and also allow you to create sub-accounts.
-
-
-=== AccountSID and Auth Token
-This is the screen where you will find your Account SID and your Auth Token. The Auth Token is the password that is required for any Restcomm-Connect API operation. You can click on the hidden button to reveal the hashed password.
-
-=== Sub-accounts
-You can create sub-accounts under your main account, which you can use to **separate** the usage of specific numbers / DIDs and the respective applications bound to those numbers.
-
-Assuming, for example, you have 2 numbers, you can create 2 sub-accounts  and have each sub-account managing only one number, without having access to edit the other one. Your main account can still manage both.
-
-For more information, please see the https://www.restcomm.com/docs/connect/api/Restcomm%20-%20Multi-tenancy%20and%20Managing%20Sub-Accounts.html[sub-accounts docs].
