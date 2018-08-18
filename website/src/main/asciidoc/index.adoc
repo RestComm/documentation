@@ -23,8 +23,6 @@ ifdef::basebackend-html[]
 ++++
 endif::basebackend-html[] 
 
-
-{nbsp} +
 {nbsp} +
 
 [.center,width="80%",cols="^3,^3,^3",options="header"]
@@ -63,7 +61,6 @@ Choose your own way to interact with Restcomm CPaaS.
 * <<connect/tutorials/index.adoc#tutorials,{product} Tutorials>> - Start building communications applications that cover real-life business use cases, using your favorite programming language.  Choose between a variety of applications templates, customize them to your own needs, and put them to use within minutes.
 
 {nbsp} +
-{nbsp} +
 
 [.text-center]
 Build your first communications application today!
@@ -74,7 +71,4 @@ https://cloud.restcomm.com/#/signup[Try for free]
 [.text-center]
 Looking for a custom plan? https://restcomm.com/contact/[Talk to sales]
 
-
-
-
-
+{nbsp} +
