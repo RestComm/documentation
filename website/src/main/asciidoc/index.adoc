@@ -24,7 +24,7 @@ ifdef::basebackend-html[]
 endif::basebackend-html[] 
 
 
-.Windtrainer workouts
+
 [width="80%",cols="3,^3,^3",options="header"]
 |=========================================================
 |Programmable Voice |Programmable SMS |Message Exchange
