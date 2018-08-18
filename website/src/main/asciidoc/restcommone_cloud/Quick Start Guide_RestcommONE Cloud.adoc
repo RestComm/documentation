@@ -144,16 +144,3 @@ Your man account can manage the permissions of both of the sub-accounts.
 
 For more information, please visit the https://www.restcomm.com/docs/connect/api/Restcomm%20-%20Multi-tenancy%20and%20Managing%20Sub-Accounts.html[sub-accounts-documentation].
 
-
-
-
-	* **Empty**: Allows you to start with an empty canvas.
-	
-	* **SMS Echo**: When you send an SMS to the Number, you will receive the same SMS back as an auto-reply.
-	
-	* **IVR Menu**: Build the kind of interactive menu you would encounter in a typical call-centre scenario.
-	
-	* **USSD Menu**: You might have experienced USSD if you have typed numbers like `*101#` into your mobile phone.
-	These are also called “Quick Codes” or “Feature Codes” and this template shows you how to use them.
-
-For more details on how to use the Visual Designer itself, to create your own scenarios, please https://www.restcomm.com/docs/connect/rvd/index.html[click here].
