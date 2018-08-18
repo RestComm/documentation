@@ -1,6 +1,5 @@
 [.text-center]
 {nbsp} +
-{nbsp} +
 [.text-center]
 == Making Business Communications Simple
 {nbsp} +
