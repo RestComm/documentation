@@ -24,8 +24,10 @@ ifdef::basebackend-html[]
 endif::basebackend-html[] 
 
 
+{nbsp} +
+{nbsp} +
 
-[width="80%",cols="3,^3,^3",options="header"]
+[width="80%",cols="^3,^3,^3",options="header"]
 |=========================================================
 |Programmable Voice |Programmable SMS |Message Exchange
 
@@ -38,6 +40,8 @@ endif::basebackend-html[]
 
 |=========================================================
 
+{nbsp} +
+{nbsp} +
 
 [.text-left]
 === Building communications applications with Restcomm CPaaS
@@ -54,15 +58,18 @@ Choose your own way to interact with Restcomm CPaaS.
 
 * <<connect/rcml/index.adoc#RCML,{product} Markup Language (RCML)>> - Define your own workflows, and let Restcomm know what to do next when your receive an incoming call or SMS.
 
-* <<connect/sdks/index.adoc#SDKs,{product} Web, iOS and Android SDKs -Embed unified communications in your Web, iOS or Android native applications.
+* <<connect/sdks/index.adoc#SDKs,{product} Web, iOS and Android SDKs>> -Embed unified communications in your Web, iOS or Android native applications.
 
 * <<connect/tutorials/index.adoc#tutorials,{product} Tutorials>> - Start building communications applications that cover real-life business use cases, using your favorite programming language.  Choose between a variety of applications templates, customize them to your own needs, and put them to use within minutes.
 
+{nbsp} +
+{nbsp} +
 
 [.text-center]
 Build your first communications application today!
 [.text-center]
 https://cloud.restcomm.com/#/signup[Try for free]
+
 
 [.text-center]
 Looking for a custom plan? https://restcomm.com/contact/[Talk to sales]
