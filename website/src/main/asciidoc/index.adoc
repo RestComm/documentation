@@ -27,7 +27,7 @@ endif::basebackend-html[]
 {nbsp} +
 {nbsp} +
 
-[width="80%",cols="^3,^3,^3",options="header"]
+[.center,width="80%",cols="^3,^3,^3",options="header"]
 |=========================================================
 |Programmable Voice |Programmable SMS |Message Exchange
 
