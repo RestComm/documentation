@@ -53,7 +53,7 @@ Creating an application only takes couple of clicks.  Restcomm users may choose 
 
 
 
-=== 2.1. Creating a Visual designer application from scratch 
+== 2.1. Creating a Visual designer application from scratch 
 
 To create a Visual designer application:
 
@@ -75,12 +75,12 @@ https://www.restcomm.com/docs/connect/rvd/index.html[Learn more] about how to us
 
 
 
-=== 2.2. Importing a Visual designer application
+== 2.2. Importing a Visual designer application
 You can upload a RCML application under your Restcomm account into the Cloud. 
 
 
 
-=== 2.3. Creating an externally hosted application
+== 2.3. Creating an externally hosted application
 Define the external URL of a RCML application. Same needs to return as response the RCML body of the application in order to make it work.
 
 
@@ -90,17 +90,17 @@ SIP clients are actual SIP accounts which can be used on different devices and S
 
 
 
-=== 3.1. Creating a SIP client from the Restcomm Console
+== 3.1. Creating a SIP client from the Restcomm Console
 To create a new SIP client, simply navigate to Dashboard -> Clients -> New client. You will be prompted to set a username and password for the new client.
 
 
 
-=== 3.2. Connecting to a Restcomm SIP client from a SIP phone
+== 3.2. Connecting to a Restcomm SIP client from a SIP phone
 Dial the following SIP address to connect from your SIP phone to your Restcomm client: <username>@cloud.restcomm.com.
 
 
 
-=== 3.3. Defining a VoiceURL of a Restcomm SIP client
+== 3.3. Defining a VoiceURL of a Restcomm SIP client
 For each Restcomm SIP client, you can optionally define VoiceURL from the Console. That is an URL of a Voice application that will be invoked any time this SIP client attempts to dial any number.
 
 To set a VoiceURL for your client navigate to your Dashboard -> Clients and select your SIP client from the list. From the Voice request drop down select Application and then choose the one you want to assign to your SIP client from the second drop down.
@@ -129,7 +129,7 @@ You can access your account settings by navigating to your username, at the top 
 
 
 
-=== 5.1. Main Account settings
+== 5.1. Main Account settings
 To access your main accounts settings, navigate to your username -> Account. You can change your password and get details about your Account SID and Auth Token.
 
 The Auth Token is the password that is required in order to perform different  Restcomm-Connect API operations. You can reveal the hashed password by clicking on the button eye button next to it.
